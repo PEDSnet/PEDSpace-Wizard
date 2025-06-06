@@ -61,10 +61,12 @@ def bulk_deposit(excel_path, csv_base_path, results_path):
         shutil.copy(thumbnail_path, curr_result_path)
 
         # generate collections
-
+        collections_text = DOMAIN_TO_COLLECTION_MAPPING[row_dict['Domain']]
+        with open(os.path.join(curr_result_path, 'collections'), 'w') as f:
+            f.write(collections_text)
         # generate contents
-
-
+        with open(os.path.join(curr_result_path, 'contents'), 'w') as f:
+            f.write(f'{row_dict['filename']}\n{DOMAIN_TO_THUMBNAIL_FILE_MAPPING[row_dict['Domain']]}\tbundle:THUMBNAIL')
 
 if __name__ == '__main__':
     bulk_deposit()
