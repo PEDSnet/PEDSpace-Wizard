@@ -53,12 +53,12 @@ def bulk_deposit(excel_path, csv_base_path, results_path):
         ET.indent(tree)
         tree.write(os.path.join(curr_result_path, "dublin_core.xml"), encoding="UTF-8", xml_declaration=True)
         # copy thumbnail
-        # thumbnail_path = os.path.join(
-        #     os.path.dirname(os.path.abspath(__file__)), 
-        #     'assets/thumbnail', 
-        #     DOMAIN_TO_THUMBNAIL_FILE_MAPPING[row_dict['Domain']]
-        # )
-        # shutil.copy(thumbnail_path, curr_result_path)
+        thumbnail_path = os.path.join(
+            os.path.dirname(os.path.abspath(__file__)), 
+            'assets/thumbnail', 
+            DOMAIN_TO_THUMBNAIL_FILE_MAPPING[row_dict['Domain']]
+        )
+        shutil.copy(thumbnail_path, curr_result_path)
 
         # generate collections
 
