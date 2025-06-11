@@ -24,7 +24,14 @@ METADATA_TO_DUBLIN_XML_MAPPING = {
     "License": {"element": "rights", "qualifier": "uri"}
 }
 
+METADATA_TO_LOCAL_XML_MAPPING = {
+    "Database_Version": {"element": "admin", "qualifier": "note"},
+    "Research_Suitability": {"element": "quality", "qualifier": "status"}
+}
 
+METADATA_TO_DSPACE_XML_MAPPING = {
+    "Type": {"element": "entity", "qualifier": "type"}
+}
 
 DOMAIN_TO_THUMBNAIL_FILE_MAPPING = {
    "Device": "DEVICES.png",
