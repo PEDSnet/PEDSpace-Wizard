@@ -12,9 +12,6 @@ METADATA_TO_DUBLIN_XML_MAPPING = {
     "Vocabulary_05": {"element": "subject", "qualifier": "other"},
     "Tags_01": {"element": "subject", "qualifier": "none"},
     "Tags_02": {"element": "subject", "qualifier": "none"},
-    "Tags_03": {"element": "subject", "qualifier": "none"},
-    "Tags_04": {"element": "subject", "qualifier": "none"},
-    "Tags_05": {"element": "subject", "qualifier": "none"},
     "Description": {"element": "description", "qualifier": "none"},
     "Provenance": {"element": "description", "qualifier": "provenance"},
     "Dev_Code": {"element": "relation", "qualifier": "uri"},
@@ -22,11 +19,12 @@ METADATA_TO_DUBLIN_XML_MAPPING = {
     "MeSH_02": {"element": "subject", "qualifier": "mesh"},
     "MeSH_03": {"element": "subject", "qualifier": "mesh"},
     "MeSH_04": {"element": "subject", "qualifier": "mesh"},
-    "MeSH_05": {"element": "subject", "qualifier": "mesh"},
     "Publisher": {"element": "publisher", "qualifier": "none"},
     "Rights_Statement": {"element": "rights", "qualifier": "none"},
     "License": {"element": "rights", "qualifier": "uri"}
 }
+
+
 
 DOMAIN_TO_THUMBNAIL_FILE_MAPPING = {
    "Device": "DEVICES.png",
@@ -40,9 +38,9 @@ DOMAIN_TO_THUMBNAIL_FILE_MAPPING = {
 }
 
 DOMAIN_TO_COLLECTION_MAPPING ={
+   "Environmental and Socioeconomic Variables": "20.500.14642/12",
    "Device": "20.500.14642/13",
    "Diagnoses": "20.500.14642/14",
-   "Environmental and Socioeconomic Variables": "20.500.14642/12",
    "Lab Results": "20.500.14642/15",
    "Medications": "20.500.14642/16",
    "Physiological Measurements": "20.500.14642/17",
