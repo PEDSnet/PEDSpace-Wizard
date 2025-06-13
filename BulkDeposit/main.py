@@ -67,7 +67,7 @@ def bulk_deposit(excel_path, csv_base_path, results_path):
         tree.write(os.path.join(curr_result_path, "metadata_dspace.xml"), encoding="UTF-8", xml_declaration=True)
         # generate metadata_local.xml
         root = ET.Element("metadata_local")
-        for key, value in METADATA_TO_DSPACE_XML_MAPPING.items():
+        for key, value in METADATA_TO_LOCAL_XML_MAPPING.items():
             element = value['element']
             qualifier = value['qualifier']
             text_value = row_dict[key]
