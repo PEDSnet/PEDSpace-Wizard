@@ -45,6 +45,11 @@ def bulk_deposit(excel_path, csv_base_path, results_path):
             element = value['element']
             qualifier = value['qualifier']
             text_value = row_dict[key]
+            try:
+                parsed_date = pd.to_datetime(text_value, errors='raise')
+                text_value = parsed_date.strftime('%Y-%m-%d')
+            except Exception:
+                pass
             dcvalue = ET.SubElement(root, "dcvalue")
             dcvalue.set("element", element)
             dcvalue.set("qualifier", qualifier)
@@ -53,7 +58,7 @@ def bulk_deposit(excel_path, csv_base_path, results_path):
         ET.indent(tree)
         tree.write(os.path.join(curr_result_path, "dublin_core.xml"), encoding="UTF-8", xml_declaration=True)
         # generate metadata_dspace.xml
-        root = ET.Element("metadata_dspace")
+        root = ET.Element("dublin_core", schema="dspace")
         for key, value in METADATA_TO_DSPACE_XML_MAPPING.items():
             element = value['element']
             qualifier = value['qualifier']
@@ -66,7 +71,7 @@ def bulk_deposit(excel_path, csv_base_path, results_path):
         ET.indent(tree)
         tree.write(os.path.join(curr_result_path, "metadata_dspace.xml"), encoding="UTF-8", xml_declaration=True)
         # generate metadata_local.xml
-        root = ET.Element("metadata_local")
+        root = ET.Element("dublin_core", schema="local")
         for key, value in METADATA_TO_LOCAL_XML_MAPPING.items():
             element = value['element']
             qualifier = value['qualifier']
