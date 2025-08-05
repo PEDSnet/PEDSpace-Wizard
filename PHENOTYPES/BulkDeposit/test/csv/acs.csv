@@ -1,0 +1,13 @@
+concept_id,concept_code,concept_name,vocabulary_id
+45542708,D57.01,Hb-SS disease with acute chest syndrome,ICD10CM
+45576406,D57.211,Sickle-cell/Hb-C disease with acute chest syndrome,ICD10CM
+45586115,D57.411,"Sickle-cell thalassemia, unspecified, with acute chest syndrome",ICD10CM
+725224,D57.431,Sickle-cell thalassemia beta zero with acute chest syndrome,ICD10CM
+725231,D57.451,Sickle-cell thalassemia beta plus with acute chest syndrome,ICD10CM
+45595766,D57.811,Other sickle-cell disorders with acute chest syndrome,ICD10CM
+44837144,517.3,Acute chest syndrome,ICD9CM
+4009385,102587001,Acute chest pain,SNOMED
+607429,1153412006,Acute chest syndrome due to sickle cell thalassemia with crisis,SNOMED
+603017,1153414007,Acute chest syndrome due to sickle cell hemoglobin C disease with crisis,SNOMED
+765385,1.28431E+14,Acute chest syndrome due to sickle cell-hemoglobin C disease with crisis,SNOMED
+254062,372146004,Acute chest syndrome,SNOMED
