@@ -1,31 +1,58 @@
 METADATA_TO_DUBLIN_XML_MAPPING = {
     "Title": {"element": "title", "qualifier": "none"},
-    "Creator_01": {"element": "contributor", "qualifier": "other"},
+
     "Date_Created": {"element": "date", "qualifier": "created"},
+
+    "Creator_01": {"element": "contributor", "qualifier": "author"},
+    "Creator_02": {"element": "contributor", "qualifier": "author"},
+    "Creator_02": {"element": "contributor", "qualifier": "author"},
+
     "Reviewer_01": {"element": "contributor", "qualifier": "advisor"},
+    "Reviewer_02": {"element": "contributor", "qualifier": "advisor"},
+    "Reviewer_03": {"element": "contributor", "qualifier": "advisor"},
+
     "Affiliation_01": {"element": "contributor", "qualifier": "other"},
+    "Affiliation_02": {"element": "contributor", "qualifier": "other"},
+    "Affiliation_03": {"element": "contributor", "qualifier": "other"},
+
     "Intention": {"element": "description", "qualifier": "abstract"},
+
     "Vocabulary_01": {"element": "subject", "qualifier": "other"},
     "Vocabulary_02": {"element": "subject", "qualifier": "other"},
     "Vocabulary_03": {"element": "subject", "qualifier": "other"},
     "Vocabulary_04": {"element": "subject", "qualifier": "other"},
     "Vocabulary_05": {"element": "subject", "qualifier": "other"},
-    "Tags_01": {"element": "subject", "qualifier": "none"},
-    "Tags_02": {"element": "subject", "qualifier": "none"},
+
     "Description": {"element": "description", "qualifier": "none"},
-    "Provenance": {"element": "description", "qualifier": "provenance"},
+    "Provenance": {"element": "provenance", "qualifier": "none"},
     "Dev_Code": {"element": "relation", "qualifier": "uri"},
+
     "MeSH_01": {"element": "subject", "qualifier": "mesh"},
     "MeSH_02": {"element": "subject", "qualifier": "mesh"},
     "MeSH_03": {"element": "subject", "qualifier": "mesh"},
     "MeSH_04": {"element": "subject", "qualifier": "mesh"},
+    "MeSH_05": {"element": "subject", "qualifier": "mesh"},
+    "MeSH_06": {"element": "subject", "qualifier": "mesh"},
+    "MeSH_07": {"element": "subject", "qualifier": "mesh"},
+
     "Publisher": {"element": "publisher", "qualifier": "none"},
     "Rights_Statement": {"element": "rights", "qualifier": "none"},
     "License": {"element": "rights", "qualifier": "uri"}
 }
 
 METADATA_TO_LOCAL_XML_MAPPING = {
+    "Evaluation_Level": {"element": "subject", "qualifier": "EvalType"},
+    "Data_Model": {"element": "subject", "qualifier": "DataModel"},
     "Database_Version": {"element": "admin", "qualifier": "note"},
+    "Med_Characterization_01": {"element": "subject", "qualifier": "MedTermChar"},
+    "Med_Characterization_02": {"element": "subject", "qualifier": "MedTermChar"},
+    "Med_Characterization_03": {"element": "subject", "qualifier": "MedTermChar"},
+    "Med_Characterization_04": {"element": "subject", "qualifier": "MedTermChar"},
+    "Tags_01": {"element": "subject", "qualifier": "flat"},
+    "Tags_02": {"element": "subject", "qualifier": "flat"},
+    "Tags_03": {"element": "subject", "qualifier": "flat"},
+    "Tags_04": {"element": "subject", "qualifier": "flat"},
+    "Tags_05": {"element": "subject", "qualifier": "flat"},
     "Research_Suitability": {"element": "quality", "qualifier": "status"}
 }
 
