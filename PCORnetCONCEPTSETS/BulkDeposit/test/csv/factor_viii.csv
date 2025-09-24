@@ -1,0 +1,4 @@
+"concept_id","concept_code","concept_name","concept_class","domain_name","vocabulary_name"
+3019250,"3209-4","Coagulation factor VIII activity actual/normal in Platelet poor plasma by Coagulation assay","Lab Test","Measurement","LOINC"
+3011832,"3210-2","Coagulation factor VIII activity [Units/volume] in Platelet poor plasma by Chromogenic method","Lab Test","Measurement","LOINC"
+3032768,"49865-9","Coagulation factor VIII activity actual/normal in Platelet poor plasma by Chromogenic method","Lab Test","Measurement","LOINC"
