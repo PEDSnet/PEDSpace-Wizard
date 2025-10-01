@@ -61,14 +61,14 @@ METADATA_TO_DSPACE_XML_MAPPING = {
 }
 
 DOMAIN_TO_THUMBNAIL_FILE_MAPPING = {
-   "Device": "DEVICES.png",
-   "Diagnoses": "DIAGNOSES.png",
-   "Environmental and Socioeconomic Variables": "AREA-LEVEL.png",
-   "Lab Results": "LAB RESULTS.png",
-   "Medications": "MEDICATIONS.png",
-   "Physiological Measurements": "PHYSMEAS.png",
-   "Procedures": "PROCEDURES.png",
-   "Visits": "VISITS.png"
+   "Device": "CONCEPTSET.png",
+   "Diagnoses": "CONCEPTSET.png",
+   "Environmental and Socioeconomic Variables": "CONCEPTSET.png",
+   "Lab Results": "CONCEPTSET.png",
+   "Medications": "CONCEPTSET.png",
+   "Physiological Measurements": "CONCEPTSET.png",
+   "Procedures": "CONCEPTSET.png",
+   "Visits": "CONCEPTSET.png"
 }
 
 DOMAIN_TO_COLLECTION_MAPPING ={
