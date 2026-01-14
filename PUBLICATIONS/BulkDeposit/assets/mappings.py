@@ -88,16 +88,17 @@ METADATA_TO_DSPACE_XML_MAPPING = {
     "Type": {"element": "entity", "qualifier": "type"}
 }
 
-DOMAIN_TO_THUMBNAIL_FILE_MAPPING = {
-   "Device": "CONCEPTSET.png",
-   "Diagnoses": "CONCEPTSET.png",
-   "Environmental and Socioeconomic Variables": "CONCEPTSET.png",
-   "Lab Results": "CONCEPTSET.png",
-   "Medications": "CONCEPTSET.png",
-   "Physiological Measurements": "CONCEPTSET.png",
-   "Procedures": "CONCEPTSET.png",
-   "Visits": "CONCEPTSET.png"
-}
+# DOMAIN_TO_THUMBNAIL_FILE_MAPPING = {
+#   "Device": "CONCEPTSET.png",
+#   "Diagnoses": "CONCEPTSET.png",
+#   "Environmental and Socioeconomic Variables": "CONCEPTSET.png",
+#   "Lab Results": "CONCEPTSET.png",
+#   "Medications": "CONCEPTSET.png",
+#   "Physiological Measurements": "CONCEPTSET.png",
+#   "Procedures": "CONCEPTSET.png",
+#   "Visits": "CONCEPTSET.png"
+# }
+
 
 DOMAIN_TO_COLLECTION_MAPPING ={
    "Scholarly Output Catalog": "20.500.14642/1271",
