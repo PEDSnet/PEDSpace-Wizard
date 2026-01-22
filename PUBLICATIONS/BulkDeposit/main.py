@@ -4,7 +4,7 @@ import shutil
 import click
 import warnings
 import xml.etree.ElementTree as ET
-from assets.mappings import METADATA_TO_DUBLIN_XML_MAPPING, DOMAIN_TO_COLLECTION_MAPPING, METADATA_TO_DSPACE_XML_MAPPING
+from assets.mappings import METADATA_TO_DUBLIN_XML_MAPPING, DOMAIN_TO_COLLECTION_MAPPING, METADATA_TO_DSPACE_XML_MAPPING, DOMAIN_TO_THUMBNAIL_FILE_MAPPING
 from datetime import datetime
 
 @click.command()
@@ -89,17 +89,18 @@ def bulk_deposit(excel_path, csv_base_path, results_path):
         #tree.write(os.path.join(curr_result_path, "metadata_local.xml"), encoding="UTF-8", xml_declaration=True)
         
         # copy thumbnail
-        #thumbnail_path = os.path.join(
-        #    os.path.dirname(os.path.abspath(__file__)), 
-        #    'assets/thumbnail', 
-        #    DOMAIN_TO_THUMBNAIL_FILE_MAPPING[row_dict['Domain']]
-        #)
-        # shutil.copy(thumbnail_path, curr_result_path)
+        thumbnail_path = os.path.join(
+            os.path.dirname(os.path.abspath(__file__)), 
+            'assets/thumbnail', 
+            DOMAIN_TO_THUMBNAIL_FILE_MAPPING[row_dict['Domain']]
+        )
+        shutil.copy(thumbnail_path, curr_result_path)
 
         # generate collections
         collections_text = DOMAIN_TO_COLLECTION_MAPPING[row_dict['Domain']]
         with open(os.path.join(curr_result_path, 'collections'), 'w') as f:
             f.write(collections_text)
+
         # generate contents
         with open(os.path.join(curr_result_path, 'contents'), 'w') as f:
             f.write(row_dict['filename'])
