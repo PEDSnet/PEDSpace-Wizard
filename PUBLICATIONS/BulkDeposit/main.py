@@ -35,18 +35,13 @@ def bulk_deposit(excel_path, csv_base_path, results_path):
     for index, row in df.iterrows():
         row_dict = row.to_dict()
         curr_result_path = os.path.join(results_path, run_id, 'Item_'+str(index).zfill(3))
-        
-        #skip if no filename
-        if not row_dict['filename'] or row_dict['filename'].strip() == '':
-            click.echo(f"Warning: Row {index} has no filename specified. Skipping.")
-            continue
-
+    
+    # create result directory
+    os.mkdir(curr_result_path)
+    
+    # copy csv only if filename exists
+    if row_dict['filename'] and row_dict['filename'].strip():
         csv_file_path = os.path.join(csv_base_path, row_dict['filename'])
-
-
-        # copy csv
-        csv_file_path = os.path.join(csv_base_path, row_dict['filename'])
-        os.mkdir(curr_result_path)
         shutil.copy(csv_file_path, curr_result_path)
         
         # generate dublin_core.xml
