@@ -32,9 +32,9 @@ def bulk_deposit(excel_path, csv_base_path, results_path):
     os.mkdir(os.path.join(results_path, run_id))
     with warnings.catch_warnings(action='ignore', category=UserWarning):
         df = pd.read_excel(excel_path, dtype=str).fillna('')
-for index, row in df.iterrows():
-    row_dict = row.to_dict()
-    curr_result_path = os.path.join(results_path, run_id, 'Item_'+str(index).zfill(3))
+    for index, row in df.iterrows():
+        row_dict = row.to_dict()
+        curr_result_path = os.path.join(results_path, run_id, 'Item_'+str(index).zfill(3))
     
     # create result directory
     os.mkdir(curr_result_path)
