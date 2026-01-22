@@ -4,7 +4,7 @@ import shutil
 import click
 import warnings
 import xml.etree.ElementTree as ET
-from assets.mappings import METADATA_TO_DUBLIN_XML_MAPPING, DOMAIN_TO_THUMBNAIL_FILE_MAPPING, DOMAIN_TO_COLLECTION_MAPPING, METADATA_TO_DSPACE_XML_MAPPING, METADATA_TO_LOCAL_XML_MAPPING
+from assets.mappings import METADATA_TO_DUBLIN_XML_MAPPING, DOMAIN_TO_COLLECTION_MAPPING, METADATA_TO_DSPACE_XML_MAPPING
 from datetime import datetime
 
 @click.command()
@@ -17,7 +17,7 @@ from datetime import datetime
 @click.option(
     '--csv_base_path', 
     type=click.Path(exists=True, file_okay=False, dir_okay=True, readable=True), 
-    required=True,
+    required=False,
     help='path to dir that holds codeset csv files'
 )
 @click.option(
