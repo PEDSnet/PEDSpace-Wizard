@@ -17,7 +17,7 @@ from datetime import datetime
 @click.option(
     '--csv_base_path', 
     type=click.Path(exists=True, file_okay=False, dir_okay=True, readable=True), 
-    required=False,
+    required=True,
     help='path to dir that holds codeset csv files'
 )
 @click.option(
