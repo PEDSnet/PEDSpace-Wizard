@@ -54,7 +54,6 @@ METADATA_TO_DUBLIN_XML_MAPPING = {
     "Affiliation_21": {"element": "contributor", "qualifier": "other"},
 
     "Abstract": {"element": "description", "qualifier": "abstract"},
-    "Description": {"element": "description", "qualifier": "none"},
     "Citation": {"element": "identifier", "qualifier": "citation"},
     "DOI": {"element": "identifier", "qualifier": "doi"},
     "Pubmed_link": {"element": "relation", "qualifier": "uri"},
