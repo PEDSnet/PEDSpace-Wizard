@@ -104,9 +104,11 @@ def bulk_deposit(excel_path, csv_base_path, results_path):
         with open(os.path.join(curr_result_path, 'collections'), 'w') as f:
             f.write(collections_text)
 
-        # generate contents
+        # generate contents (blank if no filename)
         with open(os.path.join(curr_result_path, 'contents'), 'w') as f:
-            f.write(row_dict['filename'])
-
+            if row_dict['filename'] and row_dict['filename'].strip():
+                f.write(row_dict['filename'])
+            else:
+                f.write('')  # write empty string to create blank file
 if __name__ == '__main__':
     bulk_deposit()
