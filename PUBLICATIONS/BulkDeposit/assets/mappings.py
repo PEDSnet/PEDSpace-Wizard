@@ -81,7 +81,6 @@ METADATA_TO_DUBLIN_XML_MAPPING = {
     "MeSH_18": {"element": "subject", "qualifier": "mesh"},
 
     "Publisher": {"element": "publisher", "qualifier": "none"},
-
 }
 
 METADATA_TO_DSPACE_XML_MAPPING = {
@@ -91,7 +90,6 @@ METADATA_TO_DSPACE_XML_MAPPING = {
 DOMAIN_TO_THUMBNAIL_FILE_MAPPING = {
    "Scholarly Output Catalog": "PUBLICATIONS.png",
  }
-
 
 DOMAIN_TO_COLLECTION_MAPPING ={
    "Scholarly Output Catalog": "20.500.14642/1271",

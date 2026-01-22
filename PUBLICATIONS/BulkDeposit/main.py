@@ -36,6 +36,14 @@ def bulk_deposit(excel_path, csv_base_path, results_path):
         row_dict = row.to_dict()
         curr_result_path = os.path.join(results_path, run_id, 'Item_'+str(index).zfill(3))
         
+        #skip if no filename
+        if not row_dict['filename'] or row_dict['filename'].strip() == '':
+            click.echo(f"Warning: Row {index} has no filename specified. Skipping.")
+            continue
+
+        csv_file_path = os.path.join(csv_base_path, row_dict['filename'])
+
+
         # copy csv
         csv_file_path = os.path.join(csv_base_path, row_dict['filename'])
         os.mkdir(curr_result_path)
