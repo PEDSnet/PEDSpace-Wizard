@@ -17,6 +17,12 @@ METADATA_TO_DUBLIN_XML_MAPPING = {
 
     "Intention": {"element": "description", "qualifier": "abstract"},
 
+    "Tags_01": {"element": "subject", "qualifier": "none"},
+    "Tags_02": {"element": "subject", "qualifier": "none"},
+    "Tags_03": {"element": "subject", "qualifier": "none"},
+    "Tags_04": {"element": "subject", "qualifier": "none"},
+    "Tags_05": {"element": "subject", "qualifier": "none"},
+
     "Vocabulary_01": {"element": "subject", "qualifier": "other"},
     "Vocabulary_02": {"element": "subject", "qualifier": "other"},
     "Vocabulary_03": {"element": "subject", "qualifier": "other"},
@@ -48,11 +54,6 @@ METADATA_TO_LOCAL_XML_MAPPING = {
     "Med_Characterization_02": {"element": "subject", "qualifier": "MedTermChar"},
     "Med_Characterization_03": {"element": "subject", "qualifier": "MedTermChar"},
     "Med_Characterization_04": {"element": "subject", "qualifier": "MedTermChar"},
-    "Tags_01": {"element": "subject", "qualifier": "flat"},
-    "Tags_02": {"element": "subject", "qualifier": "flat"},
-    "Tags_03": {"element": "subject", "qualifier": "flat"},
-    "Tags_04": {"element": "subject", "qualifier": "flat"},
-    "Tags_05": {"element": "subject", "qualifier": "flat"},
     "Research_Suitability": {"element": "quality", "qualifier": "status"}
 }
 
@@ -68,7 +69,8 @@ DOMAIN_TO_THUMBNAIL_FILE_MAPPING = {
    "Medications": "CONCEPTSET.png",
    "Physiological Measurements": "CONCEPTSET.png",
    "Procedures": "CONCEPTSET.png",
-   "Visits": "CONCEPTSET.png"
+   "Visits": "CONCEPTSET.png",
+   "PAQS": "CONCEPTSET.png"
 }
 
 DOMAIN_TO_COLLECTION_MAPPING ={
@@ -79,5 +81,6 @@ DOMAIN_TO_COLLECTION_MAPPING ={
    "Medications": "20.500.14642/16",
    "Physiological Measurements": "20.500.14642/17",
    "Procedures": "20.500.14642/18",
-   "Visits": "20.500.14642/19"
+   "Visits": "20.500.14642/19",
+   "PAQS": "20.500.14642/1396"
 }
