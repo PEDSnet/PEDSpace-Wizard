@@ -5,12 +5,9 @@ METADATA_TO_DUBLIN_XML_MAPPING = {
     "Creator_02": {"element": "contributor", "qualifier": "author"},
     "Creator_03": {"element": "contributor", "qualifier": "author"},
     "Affiliation_01": {"element": "contributor", "qualifier": "other"},
-    "Affiliation_02": {"element": "contributor", "qualifier": "other"},
-    "Affiliation_03": {"element": "contributor", "qualifier": "other"},
     "Date_Created": {"element": "date", "qualifier": "created"},
     "Category": {"element": "subject", "qualifier": "none"},
     "Check_Description": {"element": "description", "qualifier": "abstract"},
-    "Check_Access": {"element": "description", "qualifier": "abstract"},
     "Viz_01": {"element": "subject", "qualifier": "none"},
     "Viz_02": {"element": "subject", "qualifier": "none"},
     "Viz_03": {"element": "subject", "qualifier": "none"},
@@ -30,6 +27,7 @@ METADATA_TO_DUBLIN_XML_MAPPING = {
 METADATA_TO_LOCAL_XML_MAPPING = {
     "RawData_Description": {"element": "description", "qualifier": "raw"},
     "Viz_Description": {"element": "description", "qualifier": "viz"},
+    "Access": {"element": "code", "qualifier": "package"},
     "Parameters_01": {"element": "dqcheck", "qualifier": "requirement"},
     "Parameters_02": {"element": "dqcheck", "qualifier": "requirement"},
     "Parameters_03": {"element": "dqcheck", "qualifier": "requirement"},
@@ -37,7 +35,9 @@ METADATA_TO_LOCAL_XML_MAPPING = {
     "Parameters_05": {"element": "dqcheck", "qualifier": "requirement"},
     "Parameters_06": {"element": "dqcheck", "qualifier": "requirement"},
     "Parameters_07": {"element": "dqcheck", "qualifier": "requirement"},
-    "Parameters_08": {"element": "dqcheck", "qualifier": "requirement"}
+    "Parameters_08": {"element": "dqcheck", "qualifier": "requirement"},
+    "Parameters_09": {"element": "dqcheck", "qualifier": "requirement"},
+    "Parameters_10": {"element": "dqcheck", "qualifier": "requirement"}
 }
 
 METADATA_TO_DSPACE_XML_MAPPING = {
@@ -45,5 +45,5 @@ METADATA_TO_DSPACE_XML_MAPPING = {
 }
 
 DOMAIN_TO_COLLECTION_MAPPING ={
-   "Quantitative Variable Distributions": "20.500.14642/1018",
+   "Quantitative Variable Distributions": "20.500.14642/1018"
 }
