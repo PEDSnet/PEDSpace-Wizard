@@ -100,7 +100,7 @@ def bulk_deposit(excel_path, results_path):
         #shutil.copy(thumbnail_path, curr_result_path)
 
         # generate collections
-        collections_text = DOMAIN_TO_COLLECTION_MAPPING[row_dict['Domain']]
+        collections_text = DOMAIN_TO_COLLECTION_MAPPING[row_dict['Collection']]
         with open(os.path.join(curr_result_path, 'collections'), 'w') as f:
             f.write(collections_text)
 
