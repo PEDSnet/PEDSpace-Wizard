@@ -121,7 +121,7 @@ def bulk_deposit(excel_path, csv_base_path, results_path):
             # generate contents (blank if no filename)
         with open(os.path.join(curr_result_path, 'contents'), 'w') as f:
             if row_dict['filename'] and row_dict['filename'].strip():
-                f.write(row_dict['filename'])
+                f.write(f"{row_dict['filename']}\tbundle:THUMBNAIL")
             else:
                 f.write('')  # write empty string to create blank file
 if __name__ == '__main__':

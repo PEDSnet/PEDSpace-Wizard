@@ -76,9 +76,9 @@ DOMAIN_TO_THUMBNAIL_FILE_MAPPING = {
  }
 
 DOMAIN_TO_COLLECTION_MAPPING ={
-   "PEDSnet Projects": "",
-   "PCORnet-Designated": "",
-   "PEDSnet Nephrology Program": "",
-   "PEDSnet Scholars": "",
-   "PEDSnet Infrastructure": ""
+   "PEDSnet Projects": "20.500.14642/42",
+   "PCORnet-Designated": "20.500.14642/39",
+   "PEDSnet Nephrology Program": "20.500.14642/679",
+   "PEDSnet Scholars": "20.500.14642/822",
+   "PEDSnet Infrastructure": "20.500.14642/40"
 }

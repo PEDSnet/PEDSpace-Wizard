@@ -4,7 +4,7 @@ import shutil
 import click
 import warnings
 import xml.etree.ElementTree as ET
-from assets.mappings import METADATA_TO_DUBLIN_XML_MAPPING, DOMAIN_TO_THUMBNAIL_FILE_MAPPING, DOMAIN_TO_COLLECTION_MAPPING, METADATA_TO_DSPACE_XML_MAPPING, METADATA_TO_LOCAL_XML_MAPPING
+from assets.mappings import METADATA_TO_DUBLIN_XML_MAPPING, DOMAIN_TO_COLLECTION_MAPPING, METADATA_TO_DSPACE_XML_MAPPING, METADATA_TO_LOCAL_XML_MAPPING
 from datetime import datetime
 
 @click.command()
@@ -35,10 +35,14 @@ def bulk_deposit(excel_path, csv_base_path, results_path):
     for index, row in df.iterrows():
         row_dict = row.to_dict()
         curr_result_path = os.path.join(results_path, run_id, 'Item_'+str(index).zfill(3))
-        # copy csv
-        csv_file_path = os.path.join(csv_base_path, row_dict['filename'])
+        
+        # copy csvs
         os.mkdir(curr_result_path)
-        shutil.copy(csv_file_path, curr_result_path)
+        for filename in [row_dict['filename_01'], row_dict['filename_02']]:
+            if filename.strip():  # Skip if filename is empty or whitespace
+                csv_file_path = os.path.join(csv_base_path, filename)
+                shutil.copy(csv_file_path, curr_result_path)
+        
         # generate dublin_core.xml
         root = ET.Element("dublin_core")
         for key, value in METADATA_TO_DUBLIN_XML_MAPPING.items():
@@ -57,6 +61,7 @@ def bulk_deposit(excel_path, csv_base_path, results_path):
         tree = ET.ElementTree(root)
         ET.indent(tree)
         tree.write(os.path.join(curr_result_path, "dublin_core.xml"), encoding="UTF-8", xml_declaration=True)
+       
         # generate metadata_dspace.xml
         root = ET.Element("dublin_core", schema="dspace")
         for key, value in METADATA_TO_DSPACE_XML_MAPPING.items():
@@ -70,6 +75,7 @@ def bulk_deposit(excel_path, csv_base_path, results_path):
         tree = ET.ElementTree(root)
         ET.indent(tree)
         tree.write(os.path.join(curr_result_path, "metadata_dspace.xml"), encoding="UTF-8", xml_declaration=True)
+        
         # generate metadata_local.xml
         root = ET.Element("dublin_core", schema="local")
         for key, value in METADATA_TO_LOCAL_XML_MAPPING.items():
@@ -83,21 +89,23 @@ def bulk_deposit(excel_path, csv_base_path, results_path):
         tree = ET.ElementTree(root)
         ET.indent(tree)
         tree.write(os.path.join(curr_result_path, "metadata_local.xml"), encoding="UTF-8", xml_declaration=True)
+        
         # copy thumbnail
-        thumbnail_path = os.path.join(
-            os.path.dirname(os.path.abspath(__file__)), 
-            'assets/thumbnail', 
-            DOMAIN_TO_THUMBNAIL_FILE_MAPPING[row_dict['Domain']]
-        )
-        shutil.copy(thumbnail_path, curr_result_path)
+        # thumbnail_path = os.path.join(
+        #    os.path.dirname(os.path.abspath(__file__)), 
+        #    'assets/thumbnail', 
+        #    DOMAIN_TO_THUMBNAIL_FILE_MAPPING[row_dict['Domain']]
+        #)
+        #shutil.copy(thumbnail_path, curr_result_path)
 
         # generate collections
         collections_text = DOMAIN_TO_COLLECTION_MAPPING[row_dict['Domain']]
         with open(os.path.join(curr_result_path, 'collections'), 'w') as f:
             f.write(collections_text)
+        
         # generate contents
         with open(os.path.join(curr_result_path, 'contents'), 'w') as f:
-            f.write(f'{row_dict['filename']}\n{DOMAIN_TO_THUMBNAIL_FILE_MAPPING[row_dict['Domain']]}\tbundle:THUMBNAIL')
+            f.write(f'{row_dict['filename_01']}\n{row_dict['filename_02']}')
 
 if __name__ == '__main__':
     bulk_deposit()
