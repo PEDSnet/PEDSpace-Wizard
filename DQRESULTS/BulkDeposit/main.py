@@ -105,7 +105,7 @@ def bulk_deposit(excel_path, csv_base_path, results_path):
         
         # generate contents
         with open(os.path.join(curr_result_path, 'contents'), 'w') as f:
-            f.write(f'{row_dict['filename_01']}\n{row_dict['filename_02']}')
+            f.write(f'{row_dict['filename_01']}\n{row_dict['filename_02']}\n{row_dict['filename_03']}\n{row_dict['filename_04']}')
 
 if __name__ == '__main__':
     bulk_deposit()

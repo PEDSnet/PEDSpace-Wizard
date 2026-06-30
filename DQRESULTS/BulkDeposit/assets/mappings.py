@@ -18,9 +18,9 @@ METADATA_TO_DUBLIN_XML_MAPPING = {
     "Evaluation_Parameters_02": {"element": "subject", "qualifier": "none"},
     "Evaluation_Parameters_03": {"element": "subject", "qualifier": "none"},
 
-    "checkdesc": {"element": "description", "qualifier": "abstract"},
+    "Check Description": {"element": "description", "qualifier": "abstract"},
     "Result_Description": {"element": "description", "qualifier": "none"},
-    "Provenance": {"element": "provenance", "qualifier": "none"},
+    # "Provenance": {"element": "provenance", "qualifier": "none"},
 
     "MeSH_01": {"element": "subject", "qualifier": "mesh"},
     "MeSH_02": {"element": "subject", "qualifier": "mesh"},
@@ -79,5 +79,6 @@ DOMAIN_TO_COLLECTION_MAPPING ={
     "Date Sequencing Data Quality Check": "20.500.14642/1135",
     "Visit Clinical Data Agreement Data Quality Check": "20.500.14642/1136",
     "Expected Variables Present Data Quality Check": "20.500.14642/1137",
-    "Quantitative Variable Distributions Data Quality Check": "20.500.14642/1138"
+    "Quantitative Variable Distributions Data Quality Check": "20.500.14642/1138",
+    "Categorical Variable Distributions Data Quality Check": "20.500.14642/1130"
 }
