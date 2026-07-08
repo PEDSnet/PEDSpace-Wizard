@@ -48,6 +48,7 @@ METADATA_TO_DUBLIN_XML_MAPPING = {
 
 METADATA_TO_LOCAL_XML_MAPPING = {
     "Evaluation_Level": {"element": "subject", "qualifier": "EvalType"},
+    "Variable_Name": {"element": "variable", "qualifier": "name"},
     "Data_Model": {"element": "subject", "qualifier": "DataModel"},
     "Database_Version": {"element": "admin", "qualifier": "note"},
     "Med_Characterization_01": {"element": "subject", "qualifier": "MedTermChar"},
