@@ -77,9 +77,9 @@ DOMAIN_TO_THUMBNAIL_FILE_MAPPING = {
 DOMAIN_TO_COLLECTION_MAPPING ={
    "Environmental and Socioeconomic Variables": "20.500.14642/12",
    "Device": "20.500.14642/13",
-   "Diagnoses": "20.500.14642/14",
+   "Diagnoses": "20.500.14642/1244",
    "Lab Results": "20.500.14642/15",
-   "Medications": "20.500.14642/16",
+   "Medications": "20.500.14642/1247",
    "Physiological Measurements": "20.500.14642/17",
    "Procedures": "20.500.14642/18",
    "Visits": "20.500.14642/19",

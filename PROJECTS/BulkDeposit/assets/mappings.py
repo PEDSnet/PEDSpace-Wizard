@@ -32,7 +32,6 @@ METADATA_TO_DUBLIN_XML_MAPPING = {
     "MeSH_09": {"element": "subject", "qualifier": "mesh"},
     "MeSH_10": {"element": "subject", "qualifier": "mesh"},
 
-    "dev_code": {"element": "relation", "qualifier": "uri"},
     "related_pub": {"element": "relation", "qualifier": "isreferencedby"},
     
     "publisher": {"element": "publisher", "qualifier": "none"},
@@ -46,6 +45,8 @@ METADATA_TO_DSPACE_XML_MAPPING = {
 
 METADATA_TO_LOCAL_XML_MAPPING = {
     "site_lead": {"element": "contributor", "qualifier": "siteLead"},
+    "site_sponsor": {"element": "contributor", "qualifier": "siteSponsor"},
+    "dev_code": {"element": "code", "qualifier": "github"},
     "admin_note": {"element": "admin", "qualifier": "note"},
     "grant": {"element": "contributor", "qualifier": "grant"},
     "participating_sites_01": {"element": "contributor", "qualifier": "sites"},
@@ -80,5 +81,6 @@ DOMAIN_TO_COLLECTION_MAPPING ={
    "PCORnet-Designated": "20.500.14642/39",
    "PEDSnet Nephrology Program": "20.500.14642/679",
    "PEDSnet Scholars": "20.500.14642/822",
-   "PEDSnet Infrastructure": "20.500.14642/40"
+   "PEDSnet Infrastructure": "20.500.14642/40",
+   "HIRR": "20.500.14642/1717",
 }
