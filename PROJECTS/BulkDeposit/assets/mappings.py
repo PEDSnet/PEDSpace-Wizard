@@ -59,8 +59,6 @@ METADATA_TO_LOCAL_XML_MAPPING = {
     "participating_sites_08": {"element": "contributor", "qualifier": "sites"},
     "participating_sites_09": {"element": "contributor", "qualifier": "sites"},
     "participating_sites_10": {"element": "contributor", "qualifier": "sites"},
-    "participating_sites_11": {"element": "contributor", "qualifier": "sites"},
-    "participating_sites_12": {"element": "contributor", "qualifier": "sites"}
 }    
 
 METADATA_TO_PROJECT_XML_MAPPING = {
