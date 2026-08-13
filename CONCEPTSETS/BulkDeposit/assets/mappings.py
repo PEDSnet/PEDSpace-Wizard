@@ -31,7 +31,7 @@ METADATA_TO_DUBLIN_XML_MAPPING = {
 
     "Description": {"element": "description", "qualifier": "none"},
     "Provenance": {"element": "provenance", "qualifier": "none"},
-    "Dev_Code": {"element": "relation", "qualifier": "uri"},
+    
 
     "MeSH_01": {"element": "subject", "qualifier": "mesh"},
     "MeSH_02": {"element": "subject", "qualifier": "mesh"},
@@ -55,7 +55,9 @@ METADATA_TO_LOCAL_XML_MAPPING = {
     "Med_Characterization_02": {"element": "subject", "qualifier": "MedTermChar"},
     "Med_Characterization_03": {"element": "subject", "qualifier": "MedTermChar"},
     "Med_Characterization_04": {"element": "subject", "qualifier": "MedTermChar"},
-    "Research_Suitability": {"element": "quality", "qualifier": "status"}
+    "Research_Suitability": {"element": "quality", "qualifier": "status"},
+    "Dev_Code": {"element": "code", "qualifier": "github"},
+    "Code": {"element": "code", "qualifier": "package"},
 }
 
 METADATA_TO_DSPACE_XML_MAPPING = {
@@ -75,13 +77,13 @@ DOMAIN_TO_THUMBNAIL_FILE_MAPPING = {
 }
 
 DOMAIN_TO_COLLECTION_MAPPING ={
-   "Environmental and Socioeconomic Variables": "20.500.14642/12",
-   "Device": "20.500.14642/13",
+   "Environmental and Socioeconomic Variables": "20.500.14642/1245",
+   "Device": "20.500.14642/1235",
    "Diagnoses": "20.500.14642/1244",
-   "Lab Results": "20.500.14642/15",
+   "Lab Results": "20.500.14642/1246",
    "Medications": "20.500.14642/1247",
-   "Physiological Measurements": "20.500.14642/17",
-   "Procedures": "20.500.14642/18",
-   "Visits": "20.500.14642/19",
+   "Physiological Measurements": "20.500.14642/1248",
+   "Procedures": "20.500.14642/1249",
+   "Visits": "20.500.14642/1250",
    "PAQS": "20.500.14642/1396"
 }
