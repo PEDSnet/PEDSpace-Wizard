@@ -2,6 +2,7 @@ METADATA_TO_DUBLIN_XML_MAPPING = {
     "Title": {"element": "title", "qualifier": "none"},
 
     "Date_Created": {"element": "date", "qualifier": "created"},
+    "Date_Updated": {"element": "date", "qualifier": "updated"},
 
     "Creator_01": {"element": "contributor", "qualifier": "author"},
     "Creator_02": {"element": "contributor", "qualifier": "author"},
@@ -28,6 +29,7 @@ METADATA_TO_DUBLIN_XML_MAPPING = {
     "Vocabulary_03": {"element": "subject", "qualifier": "other"},
     "Vocabulary_04": {"element": "subject", "qualifier": "other"},
     "Vocabulary_05": {"element": "subject", "qualifier": "other"},
+    "Vocabulary_06": {"element": "subject", "qualifier": "other"},
 
     "Description": {"element": "description", "qualifier": "none"},
     "Provenance": {"element": "provenance", "qualifier": "none"},
