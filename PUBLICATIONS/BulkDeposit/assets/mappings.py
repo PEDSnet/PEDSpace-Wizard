@@ -1,6 +1,8 @@
 METADATA_TO_DUBLIN_XML_MAPPING = {
     "title": {"element": "title", "qualifier": "none"},
 
+    "type": {"element": "type", "qualifier": "none"},
+    
     "date_published": {"element": "date", "qualifier": "issued"},
 
     "Creator_01": {"element": "contributor", "qualifier": "author"},
@@ -83,13 +85,9 @@ METADATA_TO_DUBLIN_XML_MAPPING = {
 }
 
 METADATA_TO_DSPACE_XML_MAPPING = {
-    "Type": {"element": "entity", "qualifier": "type"}
+    "entity": {"element": "entity", "qualifier": "type"}
 }
 
-DOMAIN_TO_THUMBNAIL_FILE_MAPPING = {
-   "Scholarly Output Catalog": "PUBLICATIONS.png",
- }
-
 DOMAIN_TO_COLLECTION_MAPPING ={
-   "Scholarly Output Catalog": "20.500.14642/1271",
+   "PEDSnet Publications": "20.500.14642/1271",
 }
